@@ -43,6 +43,7 @@ body {
 .topbar,
 .hero,
 .grid,
+.roadmap,
 .footer {
   width: min(1080px, calc(100% - 2.5rem));
   margin-inline: auto;
@@ -59,6 +60,11 @@ body {
   margin: 0;
   letter-spacing: 0.08em;
   font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
 }
 
 .link {
@@ -101,6 +107,17 @@ h1 {
   font-size: 1.04rem;
 }
 
+.pill-link {
+  display: inline-flex;
+  margin-top: 0.6rem;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.5rem 0.95rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.5);
+}
+
 .grid {
   display: grid;
   gap: 1rem;
@@ -128,14 +145,12 @@ h1 {
   color: var(--muted);
 }
 
-.panel button {
-  border: 0;
-  border-radius: 999px;
-  padding: 0.5rem 0.85rem;
-  text-transform: lowercase;
-  font-weight: 600;
-  background: #1a1816;
-  color: #f7f2e8;
+.panel-tag {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  color: var(--muted);
 }
 
 .panel-video {
@@ -151,6 +166,107 @@ h1 {
 .panel-image {
   grid-column: span 4;
   animation-delay: 250ms;
+}
+
+.mock-lines span {
+  display: block;
+  height: 0.42rem;
+  border-radius: 999px;
+  margin-bottom: 0.45rem;
+  background: linear-gradient(90deg, rgba(26, 24, 22, 0.2), rgba(26, 24, 22, 0.07));
+}
+
+.mock-lines span:nth-child(1) {
+  width: 95%;
+}
+
+.mock-lines span:nth-child(2) {
+  width: 70%;
+}
+
+.mock-lines span:nth-child(3) {
+  width: 85%;
+}
+
+.audio-wave {
+  display: flex;
+  align-items: end;
+  gap: 0.3rem;
+  height: 2.3rem;
+}
+
+.audio-wave span {
+  display: block;
+  width: 0.35rem;
+  border-radius: 999px;
+  background: var(--accent-2);
+  animation: pulse 1100ms ease-in-out infinite;
+}
+
+.audio-wave span:nth-child(1) {
+  height: 35%;
+}
+
+.audio-wave span:nth-child(2) {
+  height: 65%;
+  animation-delay: 120ms;
+}
+
+.audio-wave span:nth-child(3) {
+  height: 90%;
+  animation-delay: 240ms;
+}
+
+.audio-wave span:nth-child(4) {
+  height: 55%;
+  animation-delay: 360ms;
+}
+
+.audio-wave span:nth-child(5) {
+  height: 75%;
+  animation-delay: 480ms;
+}
+
+.image-placeholder {
+  height: 8rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(229, 103, 47, 0.24), rgba(46, 123, 116, 0.2));
+}
+
+.roadmap {
+  padding: 0 0 3rem;
+}
+
+.roadmap h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.65rem;
+}
+
+.roadmap-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.roadmap-list article {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1rem;
+}
+
+.step {
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--accent-1);
+}
+
+.roadmap-list article p:last-child {
+  margin: 0;
+  color: var(--muted);
 }
 
 .footer {
@@ -178,11 +294,22 @@ h1 {
   }
 }
 
+@keyframes pulse {
+  50% {
+    transform: scaleY(0.6);
+    opacity: 0.65;
+  }
+}
+
 @media (max-width: 880px) {
   .panel-video,
   .panel-audio,
   .panel-image {
     grid-column: span 12;
+  }
+
+  .roadmap-list {
+    grid-template-columns: 1fr;
   }
 
   .footer {

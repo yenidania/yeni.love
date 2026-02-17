@@ -21,37 +21,73 @@
 
     <header class="topbar">
       <p class="brand">yeni.love</p>
-      <a class="link" href="#contact">contact</a>
+      <nav class="nav">
+        <a class="link" href="#media">media</a>
+        <a class="link" href="#roadmap">roadmap</a>
+        <a class="link" href="#contact">contact</a>
+      </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section id="intro" class="hero">
         <p class="eyebrow">rough v0</p>
         <h1>one page now.<br />a living media space next.</h1>
         <p class="intro">
           This is the first public shape of yeni.love. Soon this page will hold videos, audio,
           and image stories in one place.
         </p>
+        <a class="pill-link" href="#media">explore the first layout</a>
       </section>
 
-      <section class="grid" aria-label="Media sections">
+      <section id="media" class="grid" aria-label="Media sections">
         <article class="panel panel-video">
+          <p class="panel-tag">media block</p>
           <h2>video</h2>
           <p>Future home for visual stories, short films, and motion experiments.</p>
-          <button type="button">coming soon</button>
+          <div class="mock-lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </article>
 
         <article class="panel panel-audio">
+          <p class="panel-tag">media block</p>
           <h2>audio</h2>
           <p>Future home for voice notes, songs, ambient edits, and interviews.</p>
-          <button type="button">coming soon</button>
+          <div class="audio-wave" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </article>
 
         <article class="panel panel-image">
+          <p class="panel-tag">media block</p>
           <h2>images</h2>
           <p>Future home for galleries, behind-the-scenes moments, and visual archives.</p>
-          <button type="button">coming soon</button>
+          <div class="image-placeholder" aria-hidden="true"></div>
         </article>
+      </section>
+
+      <section id="roadmap" class="roadmap">
+        <h2>roadmap</h2>
+        <div class="roadmap-list">
+          <article>
+            <p class="step">now</p>
+            <p>Single page launch with a strong visual identity and media placeholders.</p>
+          </article>
+          <article>
+            <p class="step">next</p>
+            <p>Replace placeholders with real image, audio, and video embeds.</p>
+          </article>
+          <article>
+            <p class="step">later</p>
+            <p>Build category filters, archive pages, and a richer interactive gallery system.</p>
+          </article>
+        </div>
       </section>
     </main>
 
